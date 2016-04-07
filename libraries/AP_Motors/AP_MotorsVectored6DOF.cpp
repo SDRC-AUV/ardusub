@@ -40,7 +40,7 @@ void AP_MotorsVectored6DOF::setup_motors()
 	MOT_1_STRAFE_FACTOR = 1.0,
 
 	// Front left pushing down
-	MOT_2_ROLL_FACTOR = -1.0,
+	MOT_2_ROLL_FACTOR = 1.0,
 	MOT_2_PITCH_FACTOR = -1.0,
 	MOT_2_YAW_FACTOR = 0.0,
 	MOT_2_THROTTLE_FACTOR = -1.0,
@@ -56,7 +56,7 @@ void AP_MotorsVectored6DOF::setup_motors()
 	MOT_3_STRAFE_FACTOR = 1.0,
 
 	// Rear left pushing down
-	MOT_4_ROLL_FACTOR = -1.0,
+	MOT_4_ROLL_FACTOR = 1.0,
 	MOT_4_PITCH_FACTOR = 1.0,
 	MOT_4_YAW_FACTOR = 0.0,
 	MOT_4_THROTTLE_FACTOR = -1.0,
@@ -72,7 +72,7 @@ void AP_MotorsVectored6DOF::setup_motors()
 	MOT_5_STRAFE_FACTOR = -1.0,
 
 	// Front right pushing down
-	MOT_6_ROLL_FACTOR = 1.0,
+	MOT_6_ROLL_FACTOR = -1.0,
 	MOT_6_PITCH_FACTOR = -1.0,
 	MOT_6_YAW_FACTOR = 0.0,
 	MOT_6_THROTTLE_FACTOR = -1.0,
@@ -88,7 +88,7 @@ void AP_MotorsVectored6DOF::setup_motors()
 	MOT_7_STRAFE_FACTOR = -1.0,
 
 	// Rear right pushing down
-	MOT_8_ROLL_FACTOR = 1.0,
+	MOT_8_ROLL_FACTOR = -1.0,
 	MOT_8_PITCH_FACTOR = 1.0,
 	MOT_8_YAW_FACTOR = 0.0,
 	MOT_8_THROTTLE_FACTOR = -1.0,
