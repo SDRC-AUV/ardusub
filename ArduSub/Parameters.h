@@ -321,6 +321,7 @@ public:
         k_param_land_speed,
         k_param_auto_velocity_z_min, // remove
         k_param_auto_velocity_z_max, // remove - 219
+        k_param_land_speed_high,
 
         //
         // 220: PI/D Controllers
@@ -363,6 +364,24 @@ public:
 
 		//Sub-specific parameters
 		k_param_surface_depth = 256,
+
+		// Joystick button mapping parameters
+		k_param_jbtn_0 = 261,
+		k_param_jbtn_1,
+		k_param_jbtn_2,
+		k_param_jbtn_3,
+		k_param_jbtn_4,
+		k_param_jbtn_5,
+		k_param_jbtn_6,
+		k_param_jbtn_7,
+		k_param_jbtn_8,
+		k_param_jbtn_9,
+		k_param_jbtn_10,
+		k_param_jbtn_11,
+		k_param_jbtn_12,
+		k_param_jbtn_13,
+		k_param_jbtn_14,
+		k_param_jbtn_15, // 276
     };
 
     AP_Int16        format_version;
@@ -408,6 +427,7 @@ public:
     //
     AP_Int32        rtl_loiter_time;
     AP_Int16        land_speed;
+    AP_Int16        land_speed_high;
     AP_Int16        pilot_velocity_z_max;        // maximum vertical velocity the pilot may request
     AP_Int16        pilot_accel_z;               // vertical acceleration the pilot may request
 
@@ -485,6 +505,24 @@ public:
 #endif
 
     AP_Int16                rc_speed; // speed of fast RC Channels in Hz
+
+    // Joystick button parameters
+    JSButton 				jbtn_0;
+    JSButton 				jbtn_1;
+    JSButton 				jbtn_2;
+    JSButton 				jbtn_3;
+    JSButton 				jbtn_4;
+    JSButton 				jbtn_5;
+    JSButton 				jbtn_6;
+    JSButton 				jbtn_7;
+    JSButton 				jbtn_8;
+    JSButton 				jbtn_9;
+    JSButton 				jbtn_10;
+    JSButton 				jbtn_11;
+    JSButton 				jbtn_12;
+    JSButton 				jbtn_13;
+    JSButton 				jbtn_14;
+    JSButton 				jbtn_15;
 
     // Acro parameters
     AP_Float                acro_rp_p;
