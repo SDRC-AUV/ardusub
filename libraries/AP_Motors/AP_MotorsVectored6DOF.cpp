@@ -23,85 +23,85 @@
 // setup_motors - configures the motors for the BlueROV
 void AP_MotorsVectored6DOF::setup_motors()
 {
-	// call parent
-	AP_Motors6DOF::setup_motors();
+    // call parent
+    AP_Motors6DOF::setup_motors();
 
-	// hard coded config for Vectored 6DOF configuration (Triton)
-	// Positive values: strafe right, move forward, heave up 
-	//				    pitch up, roll right, yaw right
-	float
-		// Front right pushing forwards and left
-		MOT_1_ROLL_FACTOR = 0.0,
-		MOT_1_PITCH_FACTOR = 0.0,
-		MOT_1_YAW_FACTOR = 1.0,
-		MOT_1_THROTTLE_FACTOR = 0.0,
-		MOT_1_FORWARD_FACTOR = 1.0,
-		MOT_1_STRAFE_FACTOR = -1.0,
+    // hard coded config for Vectored 6DOF configuration (Triton)
+    // Positive values: strafe right, move forward, heave up 
+    //                  pitch up, roll right, yaw right
+    float
+        // Front right pushing forwards and left
+        MOT_1_ROLL_FACTOR = 0.0,
+        MOT_1_PITCH_FACTOR = 0.0,
+        MOT_1_YAW_FACTOR = 1.0,
+        MOT_1_THROTTLE_FACTOR = 0.0,
+        MOT_1_FORWARD_FACTOR = 1.0,
+        MOT_1_STRAFE_FACTOR = -1.0,
 
-		// Front left pushing forwards and right
-		MOT_2_ROLL_FACTOR = 0.0,
-		MOT_2_PITCH_FACTOR = 0.0,
-		MOT_2_YAW_FACTOR = -1.0,
-		MOT_2_THROTTLE_FACTOR = 0.0,
-		MOT_2_FORWARD_FACTOR = 1.0,
-		MOT_2_STRAFE_FACTOR = 1.0,
+        // Front left pushing forwards and right
+        MOT_2_ROLL_FACTOR = 0.0,
+        MOT_2_PITCH_FACTOR = 0.0,
+        MOT_2_YAW_FACTOR = -1.0,
+        MOT_2_THROTTLE_FACTOR = 0.0,
+        MOT_2_FORWARD_FACTOR = 1.0,
+        MOT_2_STRAFE_FACTOR = 1.0,
 
-		// Rear right pushing backwards and left
-		MOT_3_ROLL_FACTOR = 0.0,
-		MOT_3_PITCH_FACTOR = 0.0,
-		MOT_3_YAW_FACTOR = -1.0,
-		MOT_3_THROTTLE_FACTOR = 0.0,
-		MOT_3_FORWARD_FACTOR = -1.0,
-		MOT_3_STRAFE_FACTOR = -1.0,
+        // Rear right pushing backwards and left
+        MOT_3_ROLL_FACTOR = 0.0,
+        MOT_3_PITCH_FACTOR = 0.0,
+        MOT_3_YAW_FACTOR = -1.0,
+        MOT_3_THROTTLE_FACTOR = 0.0,
+        MOT_3_FORWARD_FACTOR = -1.0,
+        MOT_3_STRAFE_FACTOR = -1.0,
 
-		// Rear left pushing backwards and right
-		MOT_4_ROLL_FACTOR = 0.0,
-		MOT_4_PITCH_FACTOR = 0.0,
-		MOT_4_YAW_FACTOR = 1.0,
-		MOT_4_THROTTLE_FACTOR = 0.0,
-		MOT_4_FORWARD_FACTOR = -1.0,
-		MOT_4_STRAFE_FACTOR = 1.0,
+        // Rear left pushing backwards and right
+        MOT_4_ROLL_FACTOR = 0.0,
+        MOT_4_PITCH_FACTOR = 0.0,
+        MOT_4_YAW_FACTOR = 1.0,
+        MOT_4_THROTTLE_FACTOR = 0.0,
+        MOT_4_FORWARD_FACTOR = -1.0,
+        MOT_4_STRAFE_FACTOR = 1.0,
 
-		// Front right pushing down
-		MOT_5_ROLL_FACTOR = 1.0,
-		MOT_5_PITCH_FACTOR = -1.0,
-		MOT_5_YAW_FACTOR = 0.0,
-		MOT_5_THROTTLE_FACTOR = -1.0,
-		MOT_5_FORWARD_FACTOR = 0.0,
-		MOT_5_STRAFE_FACTOR = 0.0,
+        // Front right pushing down
+        MOT_5_ROLL_FACTOR = 1.0,
+        MOT_5_PITCH_FACTOR = -1.0,
+        MOT_5_YAW_FACTOR = 0.0,
+        MOT_5_THROTTLE_FACTOR = -1.0,
+        MOT_5_FORWARD_FACTOR = 0.0,
+        MOT_5_STRAFE_FACTOR = 0.0,
 
-		// Front left pushing down
-		MOT_6_ROLL_FACTOR = -1.0,
-		MOT_6_PITCH_FACTOR = -1.0,
-		MOT_6_YAW_FACTOR = 0.0,
-		MOT_6_THROTTLE_FACTOR = -1.0,
-		MOT_6_FORWARD_FACTOR = 0.0,
-		MOT_6_STRAFE_FACTOR = 0.0,
+        // Front left pushing down
+        MOT_6_ROLL_FACTOR = -1.0,
+        MOT_6_PITCH_FACTOR = -1.0,
+        MOT_6_YAW_FACTOR = 0.0,
+        MOT_6_THROTTLE_FACTOR = -1.0,
+        MOT_6_FORWARD_FACTOR = 0.0,
+        MOT_6_STRAFE_FACTOR = 0.0,
 
-		// Rear right pushing down
-		MOT_7_ROLL_FACTOR = 1.0,
-		MOT_7_PITCH_FACTOR = 1.0,
-		MOT_7_YAW_FACTOR = 0.0,
-		MOT_7_THROTTLE_FACTOR = -1.0,
-		MOT_7_FORWARD_FACTOR = 0.0,
-		MOT_7_STRAFE_FACTOR = 0.0,
+        // Rear right pushing down
+        MOT_7_ROLL_FACTOR = 1.0,
+        MOT_7_PITCH_FACTOR = 1.0,
+        MOT_7_YAW_FACTOR = 0.0,
+        MOT_7_THROTTLE_FACTOR = -1.0,
+        MOT_7_FORWARD_FACTOR = 0.0,
+        MOT_7_STRAFE_FACTOR = 0.0,
 
-		// Rear left pushing down
-		MOT_8_ROLL_FACTOR = -1.0,
-		MOT_8_PITCH_FACTOR = 1.0,
-		MOT_8_YAW_FACTOR = 0.0,
-		MOT_8_THROTTLE_FACTOR = -1.0,
-		MOT_8_FORWARD_FACTOR = 0.0,
-		MOT_8_STRAFE_FACTOR = 0.0;
+        // Rear left pushing down
+        MOT_8_ROLL_FACTOR = -1.0,
+        MOT_8_PITCH_FACTOR = 1.0,
+        MOT_8_YAW_FACTOR = 0.0,
+        MOT_8_THROTTLE_FACTOR = -1.0,
+        MOT_8_FORWARD_FACTOR = 0.0,
+        MOT_8_STRAFE_FACTOR = 0.0;
 
-	add_motor_raw_6dof(AP_MOTORS_MOT_1, MOT_1_ROLL_FACTOR, MOT_1_PITCH_FACTOR, MOT_1_YAW_FACTOR, MOT_1_THROTTLE_FACTOR, MOT_1_FORWARD_FACTOR, MOT_1_STRAFE_FACTOR,1);
-	add_motor_raw_6dof(AP_MOTORS_MOT_2, MOT_2_ROLL_FACTOR, MOT_2_PITCH_FACTOR, MOT_2_YAW_FACTOR, MOT_2_THROTTLE_FACTOR, MOT_2_FORWARD_FACTOR, MOT_2_STRAFE_FACTOR,2);
-	add_motor_raw_6dof(AP_MOTORS_MOT_3, MOT_3_ROLL_FACTOR, MOT_3_PITCH_FACTOR, MOT_3_YAW_FACTOR, MOT_3_THROTTLE_FACTOR, MOT_3_FORWARD_FACTOR, MOT_3_STRAFE_FACTOR,3);
-	add_motor_raw_6dof(AP_MOTORS_MOT_4, MOT_4_ROLL_FACTOR, MOT_4_PITCH_FACTOR, MOT_4_YAW_FACTOR, MOT_4_THROTTLE_FACTOR, MOT_4_FORWARD_FACTOR, MOT_4_STRAFE_FACTOR,4);
-	add_motor_raw_6dof(AP_MOTORS_MOT_5, MOT_5_ROLL_FACTOR, MOT_5_PITCH_FACTOR, MOT_5_YAW_FACTOR, MOT_5_THROTTLE_FACTOR, MOT_5_FORWARD_FACTOR, MOT_5_STRAFE_FACTOR,5);
-	add_motor_raw_6dof(AP_MOTORS_MOT_6, MOT_6_ROLL_FACTOR, MOT_6_PITCH_FACTOR, MOT_6_YAW_FACTOR, MOT_6_THROTTLE_FACTOR, MOT_6_FORWARD_FACTOR, MOT_6_STRAFE_FACTOR,6);
-	add_motor_raw_6dof(AP_MOTORS_MOT_7, MOT_7_ROLL_FACTOR, MOT_7_PITCH_FACTOR, MOT_7_YAW_FACTOR, MOT_7_THROTTLE_FACTOR, MOT_7_FORWARD_FACTOR, MOT_7_STRAFE_FACTOR,7);
-	add_motor_raw_6dof(AP_MOTORS_MOT_8, MOT_8_ROLL_FACTOR, MOT_8_PITCH_FACTOR, MOT_8_YAW_FACTOR, MOT_8_THROTTLE_FACTOR, MOT_8_FORWARD_FACTOR, MOT_8_STRAFE_FACTOR,8);
+    add_motor_raw_6dof(AP_MOTORS_MOT_1, MOT_1_ROLL_FACTOR, MOT_1_PITCH_FACTOR, MOT_1_YAW_FACTOR, MOT_1_THROTTLE_FACTOR, MOT_1_FORWARD_FACTOR, MOT_1_STRAFE_FACTOR,1);
+    add_motor_raw_6dof(AP_MOTORS_MOT_2, MOT_2_ROLL_FACTOR, MOT_2_PITCH_FACTOR, MOT_2_YAW_FACTOR, MOT_2_THROTTLE_FACTOR, MOT_2_FORWARD_FACTOR, MOT_2_STRAFE_FACTOR,2);
+    add_motor_raw_6dof(AP_MOTORS_MOT_3, MOT_3_ROLL_FACTOR, MOT_3_PITCH_FACTOR, MOT_3_YAW_FACTOR, MOT_3_THROTTLE_FACTOR, MOT_3_FORWARD_FACTOR, MOT_3_STRAFE_FACTOR,3);
+    add_motor_raw_6dof(AP_MOTORS_MOT_4, MOT_4_ROLL_FACTOR, MOT_4_PITCH_FACTOR, MOT_4_YAW_FACTOR, MOT_4_THROTTLE_FACTOR, MOT_4_FORWARD_FACTOR, MOT_4_STRAFE_FACTOR,4);
+    add_motor_raw_6dof(AP_MOTORS_MOT_5, MOT_5_ROLL_FACTOR, MOT_5_PITCH_FACTOR, MOT_5_YAW_FACTOR, MOT_5_THROTTLE_FACTOR, MOT_5_FORWARD_FACTOR, MOT_5_STRAFE_FACTOR,5);
+    add_motor_raw_6dof(AP_MOTORS_MOT_6, MOT_6_ROLL_FACTOR, MOT_6_PITCH_FACTOR, MOT_6_YAW_FACTOR, MOT_6_THROTTLE_FACTOR, MOT_6_FORWARD_FACTOR, MOT_6_STRAFE_FACTOR,6);
+    add_motor_raw_6dof(AP_MOTORS_MOT_7, MOT_7_ROLL_FACTOR, MOT_7_PITCH_FACTOR, MOT_7_YAW_FACTOR, MOT_7_THROTTLE_FACTOR, MOT_7_FORWARD_FACTOR, MOT_7_STRAFE_FACTOR,7);
+    add_motor_raw_6dof(AP_MOTORS_MOT_8, MOT_8_ROLL_FACTOR, MOT_8_PITCH_FACTOR, MOT_8_YAW_FACTOR, MOT_8_THROTTLE_FACTOR, MOT_8_FORWARD_FACTOR, MOT_8_STRAFE_FACTOR,8);
 
 }
 
@@ -118,12 +118,12 @@ void AP_MotorsVectored6DOF::output_armed_stabilizing()
     float   forward_thrust;             // forward thrust input value, +/- 1.0
     float   lateral_thrust;             // lateral thrust input value, +/- 1.0
 
-	roll_thrust = _roll_in;
-	pitch_thrust = _pitch_in;
-	yaw_thrust = _yaw_in;
-	throttle_thrust = get_throttle_bidirectional();
-	forward_thrust = _forward_in;
-	lateral_thrust = _lateral_in;
+    roll_thrust = _roll_in;
+    pitch_thrust = _pitch_in;
+    yaw_thrust = _yaw_in;
+    throttle_thrust = get_throttle_bidirectional();
+    forward_thrust = _forward_in;
+    lateral_thrust = _lateral_in;
 
     float rpt_out[AP_MOTORS_MAX_NUM_MOTORS]; // buffer so we don't have to multiply coefficients multiple times.
     float yfl_out[AP_MOTORS_MAX_NUM_MOTORS]; // 3 linear DOF mix for each motor
@@ -150,7 +150,7 @@ void AP_MotorsVectored6DOF::output_armed_stabilizing()
     rpt_max = 1; //Initialized to 1 so that normalization will only occur if value is saturated
     for (i=0; i<AP_MOTORS_MAX_NUM_MOTORS; i++) {
         if (motor_enabled[i]) {
-        	rpt_out[i] = roll_thrust * _roll_factor[i] +
+            rpt_out[i] = roll_thrust * _roll_factor[i] +
                          pitch_thrust * _pitch_factor[i] +
                          throttle_thrust * _throttle_factor[i];
             if (fabs(rpt_out[i]) > rpt_max) {
@@ -164,9 +164,9 @@ void AP_MotorsVectored6DOF::output_armed_stabilizing()
     yfl_max = 1; //Initialized to 1 so that normalization will only occur if value is saturated
     for (i=0; i<AP_MOTORS_MAX_NUM_MOTORS; i++) {
         if (motor_enabled[i]) {
-        	yfl_out[i] = yaw_thrust * _yaw_factor[i] +
-        					forward_thrust * _forward_factor[i] +
-							lateral_thrust * _lateral_factor[i];
+            yfl_out[i] = yaw_thrust * _yaw_factor[i] +
+                            forward_thrust * _forward_factor[i] +
+                            lateral_thrust * _lateral_factor[i];
             if (fabs(yfl_out[i]) > yfl_max) {
                 yfl_max = fabs(yfl_out[i]);
             }                
@@ -176,7 +176,7 @@ void AP_MotorsVectored6DOF::output_armed_stabilizing()
     // Calculate final output for each motor and normalize if necessary 
     for (i=0; i<AP_MOTORS_MAX_NUM_MOTORS; i++) {
         if (motor_enabled[i]) {
-        	_thrust_rpyt_out[i] = constrain_float(_motor_reverse[i]*(rpt_out[i]/rpt_max + yfl_out[i]/yfl_max),-1.0f,1.0f);
+            _thrust_rpyt_out[i] = constrain_float(_motor_reverse[i]*(rpt_out[i]/rpt_max + yfl_out[i]/yfl_max),-1.0f,1.0f);
         }
     }
 }
